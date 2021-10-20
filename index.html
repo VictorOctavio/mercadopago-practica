@@ -11,13 +11,36 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12"><h3 class="text-center">JUEGOS EN LINEA</h3></div>
-            <div class="card col-5 mt-3">
-                <img src="./assets/product.jpg" class="img-fluid m-0"/>
+            <div class="card col-6 mt-3">
+                <img src="https://www.nbamaniacs.com/wp-content/uploads/2020/07/0B47D538-E399-436E-8E09-1CA2622F12CF.jpeg" class="img-fluid m-0 py-2"/>
                 <div class="card-body">
-                    <h6 class="w-300 m-0">NBA 2K21</h6>
-                    <p class="m-0">Entrenar cada dia como si fuese el ultimo.</p>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="mb-0">NBA 2K21</h6>
+                        <strong style="margin-bottom: 5px; margin-top: -10px; font-size: 20px;">$7500</strong>
+                    </div>
+                    <p class="m-0 mt-2" style="color: rgb(155, 155, 155); text-align: justify;">Entrena cada día como si fuese el último.</p>
                 </div>
-                <form class="card-footer">
+                <form class="card-footer px-0" action="http://localhost:8000/checkout" method="POST">
+                    <input type="hidden" name="title" value="NBA 2K21"/>
+                    <input type="hidden" name="price" value="7500"/>
+                    <input type="submit" value="Comprar Ahora" class="btn btn-warning btn-block w-100"/>
+                </form>
+            </div>
+
+
+
+            <div class="card col-6 mt-3">
+                <img src="https://i.blogs.es/0a2b76/e53cynvwuaix9pa/450_1000.jpeg" class="img-fluid m-0 py-2"/>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="mb-0">FIFA 22</h6>
+                        <strong style="margin-bottom: 5px; margin-top: -10px; font-size: 20px;">$3500</strong>
+                    </div>
+                    <p class="m-0 mt-2" style="color: rgb(155, 155, 155); text-align: justify;">Disputa cada partido como si fuese el último.</p>
+                </div>
+                <form class="card-footer px-0" action="http://localhost:8000/checkout" method="POST">
+                    <input type="hidden" name="title" value="FIFA 22"/>
+                    <input type="hidden" name="price" value="3500"/>
                     <input type="submit" value="Comprar Ahora" class="btn btn-warning btn-block w-100"/>
                 </form>
             </div>

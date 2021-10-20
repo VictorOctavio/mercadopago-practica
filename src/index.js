@@ -12,30 +12,52 @@ mercadopago.configure({
 })
 
 //Middlewares
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //Routes
-app.get('/checkout', (req, res) => {
+app.post('/checkout', async (req, res) => {
+
+    //Capturar data body
+    const { title, price } = req.body;
+
+    console.log(title, price);
 
     // Crea un objeto de preferencia
     let preference = {
         items: [
             {
-                title: 'Mi producto',
-                unit_price: 100,
+                title,
+                unit_price: parseInt(price),
                 quantity: 1,
+                description: "Disputa cada partido como si fuese el último."
             }
-        ]
+        ],
+        "back_urls": {
+            success: "file:///C:/Users/octi_SSJ/Documents/CURSOS/NodeJS/mercadopago/index.html",
+            pending: "",
+            failure: ""
+        },
+        "address": {
+            "street_name": "Verona",
+            "street_number": 5208,
+            "zip_code": "3400"
+        }
     };
 
-    mercadopago.preferences.create(preference)
-        .then(function (response) {
+    try {
+        const mp = await mercadopago.preferences.create(preference)
 
-        
-        }).catch(function (error) {console.log(error);});
+        return res.redirect(mp.body.init_point);
 
-    return res.send('<h1>Hello, test router ASD</h1>')
+    } catch (err) { console.log(err) }
+
+
+    // mercadopago.preferences.create(preference)
+    //     .then(function (response) {
+    //         console.log(response);
+    //     }).catch(function (error) { console.log(error); });
+
 })
 
 //server
