@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "id": 1003730267,
+            "nickname": "TESTFUODRX7W",
+            "password": "qatest1367",
+            "site_status": "active",
+            "email": "test_user_66558072@testuser.com",
+            "crated_at": "20/10/2021",
+            "credentials": {
+                "production": {
+                    "access_token": "APP_USR-7971436128563281-102011-47d10b38d42ddc5a53be01be82008b2b-1003730267",
+                    "public_key": "APP_USR-fce41078-7983-424d-bb78-5c8ada923c36"
+                },
+                "test": {
+                    "access_token": "",
+                    "public_key": ""
+                }
+            }
+        },{
+            "id": 1003736552,
+            "nickname": "TT462944",
+            "password": "qatest9639",
+            "site_status": "active",
+            "email": "test_user_30700932@testuser.com",
+            "crated_at": "20/10/2021",
+            "credentials": {
+                "production": {
+                    "access_token": "APP_USR-8778872683652893-102011-48b43aac7a78872dedf3ddc69e2a13a1-1003736552",
+                    "public_key": "APP_USR-5d750347-dd3c-420c-aa2a-08310762f12d"
+                },
+                "test": {
+                    "access_token": "",
+                    "public_key": ""
+                }
+            }
+        }
+    ] 
+}
